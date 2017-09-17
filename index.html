@@ -1,0 +1,275 @@
+
+<html lang="fr">
+  <head>
+		<meta charset="utf-8">
+		<title>Matthieu MOISSON : CV intéractif</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Site regroupant les différentes configurations des ordinateurs en fonction de ses besoins." />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script type='text/javascript'>
+			$(document).ready(function(){				
+				$("#emplois").hide(1000);
+				$("#projets").hide(1000);
+				$("#stages").show(1000);
+				$("#lang").hide(1000);
+				$("#prog").hide(1000);
+				$("#meca").hide(1000);
+				$("#elec").hide(1000);
+				$("#autom").hide(1000);
+				$("#autre").hide(1000);
+				$("#bouton_stages").addClass("encours");
+				$("#bouton_intro").addClass("encours");
+			    $('html, body').animate({scrollTop: $("#presentation").offset().top}, 1000);
+			 }
+			);
+			function scrollbouton(bouton)
+			{
+				$('html, body').animate({scrollTop: $('#'+bouton).offset().top}, 1000);
+				$("#bouton_intro").removeClass("encours");
+				$("#bouton_monparcours").removeClass("encours");
+				$("#bouton_experience").removeClass("encours");
+				$("#bouton_mesconnaissances").removeClass("encours");
+				$("#bouton_contact").removeClass("encours");
+				if(bouton=="presentation"){$("#bouton_intro").addClass("encours");}
+				if(bouton=="monparcours"){$("#bouton_monparcours").addClass("encours");}
+				if(bouton=="experience"){$("#bouton_experience").addClass("encours");}
+				if(bouton=="mesconnaissances"){$("#bouton_mesconnaissances").addClass("encours");}
+				if(bouton=="contact"){$("#bouton_contact").addClass("encours");}
+			}
+			function experience(bouton)
+			{
+				$("#stages").hide(1000);
+				$("#bouton_stages").removeClass("encours");
+				$("#projets").hide(1000);
+				$("#bouton_projets").removeClass("encours");
+				$("#emplois").hide(1000);
+				$("#bouton_emplois").removeClass("encours");
+				$("#"+bouton).show(1000);
+				$("#bouton_"+bouton).addClass("encours");
+			}
+			function mesconnaissances(bouton)
+			{
+				$("#prog").hide(1000);
+				$("#meca").hide(1000);
+				$("#elec").hide(1000);
+				$("#autom").hide(1000);
+				$("#autre").hide(1000);
+				$("#lang").hide(1000);
+				$("#"+bouton).toggle(1000);
+			}
+			$(window).scroll(function()
+			{
+				$("#bouton_intro").removeClass("encours");
+				$("#bouton_monparcours").removeClass("encours");
+				$("#bouton_experience").removeClass("encours");
+				$("#bouton_mesconnaissances").removeClass("encours");
+				$("#bouton_contact").removeClass("encours");
+			    var scrollPos = $(document).scrollTop();
+			    var activediv = $(this);
+			    if (activediv.position().top <= scrollPos) 
+			    {
+			    	$("#bouton_"+activediv).addClass("encours");
+			    }
+			});
+		    
+		</script>
+	</head>
+
+	<body>
+		<div class="intro" id="presentation"><div class="contenu_intro">
+			<img src="img/moi.JPG" class="img-circle image" alt="Ma photo" width="150px">
+			<p style="line-height:200%;color:White;">Bonjour, je suis <b>Matthieu MOISSON</b>. Je suis <b>ingénieur</b> en <b>informatique</b> diplomé de <b>Polytech</b> </p>
+
+			<p style="line-height:200%;color:White;"><b>Sérieux</b>, <b>curieux</b> et d’<b>esprit ouvert</b> je recherche un emploi privilégiant le travail en équipe comme chef de projet, ingénieur formateur ou ingénieur dans mes domaines de connaissances.</p>
+
+			<p style="line-height:200%;color:White;">J'ai <b>24 ans</b> et je suis titulaire du <b>permis B</b>.</p>
+			<br>
+			<p style="color:White;text-align:center;margin-top:5px"><a href="CV_Aurelien_MOISSON.pdf" target="google"><img src="img/CV_papier.jpg" width="100px" style="border:1px solid black;"></a><br>CV papier</p>
+		</div></div>
+		<div class="parcours"><div class="contenu" id="monparcours">
+			<h1 class="c_parc">Mon parcours</h1>
+			<div class="col-sm-4">
+					<h2 class="c_parc">Années 2015-2017 :</h2>
+					<p>Etudiant en école d'ingénieur à <b style="color:#116493;">Polytech</b> (<b style="color:#116493;"></p>
+					<img src="img/Polytech.JPG" style="width:150px; display:block;margin-left:auto;margin-right:auto;margin-top:20px;text-align:center;">
+			</div>
+		</div></div>
+		<div class="experience"><div class="contenu" id="experience">
+			<h1 class="c_exp"> Mon expérience</h1>
+			<div class="row">
+				<div class="col-xs-4">
+					<a href="javascript:experience('stages')" class="col-sm-4 bouton_exp"id="bouton_stages">
+						Mes stages
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="javascript:experience('emplois')" class="col-sm-4 bouton_exp" id="bouton_emplois">
+						Mes emplois
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="javascript:experience('projets')" class="col-sm-4 bouton_exp" id="bouton_projets">
+						Mes projets tuteurés
+					</a>
+				</div>
+			</div>
+			<div class="contenu_exp" id="stages">
+				<h2 class="c_exp"> Mars-Septembre 2016 :</h2>
+					<p><b style="color:#FEA100;">Stage ingénieur de fin d'étude</b> : « Analyse et quantification des <b style="color:#FEA100;">ondes électromagnétiques</b> dans les installations électriques d'<b style="color:#FEA100;">EDF</b> » à <b style="color:#FEA100;">EDF Limoges</b>.</p>
+
+					<h2 class="c_exp">Juin-Août 2014 :</h2>
+					<p><b style="color:#FEA100;">Stage d’assistant ingénieur</b> dans l’entreprise <b style="color:#FEA100;">Smurfit Kappa</b> à Saillat sur Vienne. Travail sur la mise en place du projet « <b style="color:#FEA100;">EPOMIS</b> » permettant le suivi à distance de la production. </p>
+
+					<h2 class="c_exp">Avril-Juin 2012 :</h2>
+					<p><b style="color:#FEA100;">Stage à l’étranger</b> : entreprise <b style="color:#FEA100;">Thomas & Betts</b> à <b style="color:#FEA100;">Montréal</b> au <b style="color:#FEA100;">Québec</b>. Travail sur <b style="color:#FEA100;">deux projets d’étude</b> :
+						<li>« Modélisation sur plans 2D avec AutoCad afin d’améliorer les flux de production et la circulation sécurisée des personnes  dans l’entreprise ».</li>
+						<li>« Mise en place d'un calendrier de tests de qualité sur les produits fabriqués ».</li>
+					</p>
+			</div>
+			<div class="contenu_exp" id="emplois">
+
+				<h2 class="c_exp">Année 2015 :</h2>
+				<p><b style="color:#FEA100;">Cours de mathématiques</b> à domicile.</p>
+
+				<h2 class="c_exp">Étés 2010, 2011 et 2012 :</h2>
+				<p>Emploi saisonnier à la mairie de Saint-Junien au service « Culture et Patrimoine ».</p>
+
+			</div>
+			<div class="contenu_exp" id="projets">
+				<h2 class="c_exp">Années 2014-2015 :</h2>
+				<p><b style="color:#FEA100;">Projet Tuteuré</b> : « Etude de conception d’un actionneur à retour d’informations de type servomoteur » pour l’entreprise <b style="color:#FEA100;">Cybedroïd</b>.</p>
+
+				<h2 class="c_exp">Années 2013-2014 :</h2>
+				<p><b style="color:#FEA100;">Projet Tuteuré</b> : « Modélisation d'une <b style="color:#FEA100;">fontaine de Lorenz</b> ».</p>
+
+				<h2 class="c_exp">Années 2011-2012 :</h2>
+				<p><b style="color:#FEA100;">Projet Tuteuré</b> : « Création d’un matériau composite recyclable et réalisation d’essais de traction ».</p></div>
+			<div class="row" style="margin-bottom:30px;">
+			</div>			
+		</div></div>
+		<div class="connaissance"><div class="contenu" id="mesconnaissances">
+			<h1 class="c_connaissance">Mes connaissances</h1>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('lang')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Langues</h2></a>
+						<p><div id="lang">
+							<li>Anglais : score TOIEC :  <b style="color:#FF073A;">785</b>.</li>
+							<li>Espagnol : Niveau B1.</li>
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('autom')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Automatisme et automatique</h2></a>
+						<p><div id="autom">
+							<li><b style="color:#FF073A;">Automatisme industriel</b> : <b style="color:#FF073A;">Grafcet</b> et <b style="color:#FF073A;">Ladder</b>.
+							<li><b style="color:#FF073A;">Régulation</b>.
+							<li><b style="color:#FF073A;">Traitement d’image</b>.
+							<li><b style="color:#FF073A;">Robotique</b>.
+							<li><b style="color:#FF073A;">Connaissance des réseaux ABB et METSO</b>.
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('elec')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Electronique et électrotechnique</h2></a>
+						<p><div id="elec">
+							<li>Electronique d’instrumentation.
+							<li>Electronique de commande.
+							<li>Traitement du signal.
+							<li>Traitement numérique du signal.
+							<li>Systèmes d’entrainement.
+							<li>Réseaux industriels.				
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('meca')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Mécanique</h2></a>
+						<p><div id="meca">
+							<div class="col-xs-6">
+								<li>CFAO sous le logiciel CATIA.
+								<li>Conception mécanique.
+								<li>Mécanique newtonienne.
+								<li>Spécifications géométriques et fabrication.
+								<li>Transmission de puissance.
+								<li>Mesures vibratoire et acoustique.
+								<li>Hydraulique industrielle.
+							</div>
+							<div class="col-xs-6">
+								<li>Méthodes éléments finis.
+								<li>Calculs de structures.
+								<li>Mécanique Lagrangienne.
+								<li>Mécanique du vol.
+								<li>Science des matériaux.
+								<li>Mécanique statique et dynamique.
+							</div>
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('prog')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Programmation</h2></a>
+							<p><div id="prog">
+							<li>Programmation <b style="color:#FF073A;">C</b> et <b style="color:#FF073A;">C++</b> (pour les programmes informatiques, microcontrôleurs et DSP).
+							<li>Programmation <b style="color:#FF073A;">VBA</b>.
+							<li>Programmation graphique : <b style="color:#FF073A;">Labview</b>.
+							<li>Programmation <b style="color:#FF073A;">web</b> (<b style="color:#FF073A;">HTML</b>, <b style="color:#FF073A;">CSS</b>, <b style="color:#FF073A;">JavaScript</b>,<b style="color:#FF073A;"> PHP</b> et <b style="color:#FF073A;">SQL</b>).
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('autre')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Autres domaines</h2></a>
+						<p><div id="autre">
+							<li>Thermique.	
+							<li>Communication.	
+							<li>Droit privé et public.	
+							<li>Gestion et management de projet.	
+							<li>Mathématiques financières.	
+							<li>Comptabilité.	
+							<li>Finance et économie d'entreprise.	
+							<li>Qualité, sécurité et environnement.	
+							<li>Management de l'innovation.	
+						</div></p>
+					</div>
+		</div></div>		
+		<div class="contact"><div class="contenu" id="contact">
+			<div class="row" style="margin-bottom:30px;">
+				<h1 class="c_cont">Me contacter</h1>
+					<div id="form_contact" style="text-align:center">
+					    <form action="process.php" id="
+					    " method="POST">
+
+					            <br><label for="nom" class="nom"><h2 class="c_cont" style="text-align:center;">Nom :</h2></label>
+					            <br /><input id="nom" name="nom" type="text">
+					            <span id="msg_nom"></span>
+
+					            <br><label for="sujet" class="sujet"><h2 class="c_cont" style="text-align:center;">Sujet :</h2></label>
+					            <br /><input id="sujet" name="sujet" type="text">
+					            <span id="msg_sujet"></span>
+
+					            <br><label for="email"><h2 class="c_cont" style="text-align:center;">Votre email :</h2></label>
+					            <br /><input id="email" name="email" type="email">
+					            <span id="msg_email"></span>
+
+					            <br><label for="message"><h2 class="c_cont" style="text-align:center;">Message :</h2></label>
+					            <br /><textarea id="message" name="message" style="width:100%;height:200px;"></textarea>
+					           <span id="msg_message"></span>
+
+					            <br><input type="submit" value="Envoyer" />
+					    </form>
+					    <span id="msg_all"></span> 
+					</div>
+			</div>
+		</div>	</div>	
+ 		<div id="menu">
+			<a href="javascript:scrollbouton('presentation')" class="bouton_intro" id="bouton_intro">Présentation</a>
+			<a href="javascript:scrollbouton('monparcours')" class="bouton_monparcours" id="bouton_monparcours">Mon parcours</a>
+			<a href="javascript:scrollbouton('experience')" class="bouton_experience" id="bouton_experience">Mon expérience</a>
+			<a href="javascript:scrollbouton('mesconnaissances')" class="bouton_mesconnaissances" id="bouton_mesconnaissances">Mes connaissances</a>
+			<a href="javascript:scrollbouton('contact')" class="bouton_contact" id="bouton_contact">Contact</a>
+		</div>						
+	</body>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-68583525-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
