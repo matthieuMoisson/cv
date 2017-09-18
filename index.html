@@ -20,6 +20,9 @@
 				$("#stages").show(1000);
 				$("#lang").hide(1000);
 				$("#outil").hide(1000);
+				$("#fram").hide(1000);
+				$("#ide").hide(1000);
+				$("#sgbd").hide(1000);
 				$("#languages").hide(1000);
 				$("#prog").hide(1000);
 				$("#meca").hide(1000);
@@ -66,6 +69,9 @@
 				$("#autre").hide(1000);
 				$("#lang").hide(1000);
 				$("#outil").hide(1000);
+				$("#fram").hide(1000);
+				$("#ide").hide(1000);
+				$("#sgbd").hide(1000);
 				$("#languages").hide(1000);
 				$("#"+bouton).toggle(1000);
 			}
@@ -166,10 +172,16 @@
 				</p>
 			</div>
 			<div class="contenu_exp" id="projets">
+				<h2 class="c_exp">Années 2017-2018 :</h2>
+				<p><b style="color:#FEA100;">Projet Tuteuré</b> : </p>
+				
 				<h2 class="c_exp">Années 2016-2017 :</h2>
-				<p><b style="color:#FEA100;">Projet Tuteuré</b> : Création d'un matériau composite recyclable et réalisation d'essais de traction</p></div>
+				<p><b style="color:#FEA100;">Projet Tuteuré</b> : </p>
+			</div>
+			
 			<div class="row" style="margin-bottom:30px;">
-			</div>			
+			</div>	
+			
 		</div></div>
 		<div class="connaissance"><div class="contenu" id="mesconnaissances">
 			<h1 class="c_connaissance">Mes connaissances</h1>
@@ -192,21 +204,85 @@
 							<li>C#</li>
 							<li>Bash</li>
 							<li>SQL</li>
-							<li>SQL</li>
 							<li>SAS</li>
 						</div></p>
 					</div>
 					<div class="row" style="margin-bottom:10px;">
 						<a href="javascript:mesconnaissances('outil')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Outils</h2></a>
 						<p><div id="outil">
+							<li>Git</li>
+							<li>Trello</li>
+							<li>Altassian</li>
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('fram')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Frameworks</h2></a>
+						<p><div id="fram">
+							<li>Symfony</li>
+							<li>AngularJS</li>
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('sgbd')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>SGBD</h2></a>
+						<p><div id="sgbd">
+							<li>MySQL</li>
 							<li>Oracle</li>
+						</div></p>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<a href="javascript:mesconnaissances('ide')"><h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>IDE</h2></a>
+						<p><div id="ide">
+							<li>Visual Studio</li>
+							<li>Intelij</li>
+							<li>Eclipse</li>
+							<li>NetBean</li>
 						</div></p>
 					</div>
 		</div></div>	
 		
 		<div class="connaissance"><div class="contenu" id="interet">
 			<h1 class="c_interet">Mes Centres d'intérêt</h1>
-					
+			<div class="row">
+			  <div class="col-sm-6 col-md-6">
+				<div class="thumbnail">
+				  <img src="img/moi.jpg" alt="Moi" width="200px">
+				  <div class="caption">
+					<h3>Sport</h3>
+					<p>
+						<li>Course à pied en compétition</li>  
+						<li>Parapente</li>
+						<li>Vélo de route</li>
+						<li>Randonnée en montagne</li> 
+						<li>Aviron</li>
+					</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+				<div class="thumbnail">
+				  <img src="img/livre.jpg" alt="Moi" width="200px">
+				  <div class="caption">
+					<h3>Literrature</h3>
+					<p>
+					<li>Magazine scientifique</li>
+					<li>Romans d’héroïque fantaisie</li> 
+					<li>Presse quotidienne régionale</li>
+					</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6 col-md-6">
+				<div class="thumbnail">
+				  <img src="img/meetup.png" alt="Moi" width="200px">
+				  <div class="caption">
+					<h3>MeetUp</h3>
+					<p>
+					<li>Data Science</li>
+					</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
 		</div></div>	
  		<div id="menu">
 			<a href="javascript:scrollbouton('presentation')" class="bouton_intro" id="bouton_intro">Présentation</a>
